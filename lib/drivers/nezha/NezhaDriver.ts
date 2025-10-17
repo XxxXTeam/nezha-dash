@@ -5,6 +5,7 @@
 import { connection } from "next/server"
 import type { MakeOptional } from "@/app/types/utils"
 import getEnv from "@/lib/env-entry"
+import { getCountryCodeFromServerIPs } from "@/lib/geo/ip-to-country"
 import { BaseDriver } from "../base"
 import type { DriverConfig, NezhaAPI, NezhaAPIMonitor, ServerApi } from "../types"
 import { DriverOperationError } from "../types"
@@ -77,6 +78,21 @@ export class NezhaDriver extends BaseDriver {
           data.total_out_speed += element.status.NetOutSpeed
         } else {
           data.offline_servers += 1
+        }
+
+        // Auto-fill CountryCode from IP before removing sensitive data
+        if (!element.host?.CountryCode || element.host.CountryCode.trim() === "") {
+          try {
+            const countryCode = getCountryCodeFromServerIPs(element.ipv4, element.ipv6)
+            if (countryCode) {
+              if (!element.host) {
+                element.host = {} as any
+              }
+              element.host.CountryCode = countryCode
+            }
+          } catch (error) {
+            // Silently handle errors
+          }
         }
 
         // Remove sensitive properties

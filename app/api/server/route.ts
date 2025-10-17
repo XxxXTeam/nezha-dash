@@ -21,6 +21,7 @@ export async function GET() {
 
   try {
     const data = await GetServerData()
+    // CountryCode auto-fill from IP is now handled in the driver layer
     return NextResponse.json(data, { status: 200 })
   } catch (error) {
     const err = error as ResError

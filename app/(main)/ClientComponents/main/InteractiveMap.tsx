@@ -59,13 +59,13 @@ export function InteractiveMap({
           />
           {filteredFeatures.map((feature, index) => {
             const isHighlighted = countries.includes(feature.properties.iso_a2_eh)
-
             const serverCount = serverCounts[feature.properties.iso_a2_eh] || 0
+            const pathData = path(feature) || ""
 
             return (
               <path
                 key={feature.properties.iso_a2_eh + String(index)}
-                d={path(feature) || ""}
+                d={pathData}
                 className={
                   isHighlighted
                     ? "cursor-pointer fill-green-700 transition-all hover:fill-green-600 dark:fill-green-900 dark:hover:fill-green-700"
@@ -108,11 +108,15 @@ export function InteractiveMap({
             )
 
             // 如果已经在 filteredFeatures 中，跳过
-            if (isInFilteredFeatures) return null
+            if (isInFilteredFeatures) {
+              return null
+            }
 
             // 获取国家的经纬度
             const coords = countryCoordinates[countryCode]
-            if (!coords) return null
+            if (!coords) {
+              return null
+            }
 
             // 使用投影函数将经纬度转换为 SVG 坐标
             const [x, y] = projection([coords.lng, coords.lat]) || [0, 0]

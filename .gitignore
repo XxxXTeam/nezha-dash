@@ -47,3 +47,10 @@ next-env.d.ts
 .env
 
 CLAUDE.md
+
+# GeoIP database files (too large for git)
+# Keep chunks (small files) but ignore the original large .mmdb
+/lib/maxmind-db/GeoLite2-City.mmdb
+/lib/maxmind-db/GeoLite2-ASN.mmdb
+/lib/maxmind-db/country.mmdb
+

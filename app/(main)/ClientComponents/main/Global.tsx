@@ -11,12 +11,13 @@ import { getCountryCodeForMap } from "@/lib/utils"
 export default function ServerGlobal() {
   const { data: nezhaServerList, error } = useServerData()
 
-  if (error)
+  if (error) {
     return (
       <div className="flex flex-col items-center justify-center">
         <p className="font-medium text-sm opacity-40">{error.message}</p>
       </div>
     )
+  }
 
   if (!nezhaServerList) {
     return <GlobalLoading />
@@ -26,15 +27,22 @@ export default function ServerGlobal() {
   const serverCounts: { [key: string]: number } = {}
 
   for (const server of nezhaServerList.result) {
-    if (server.host.CountryCode) {
-      // Convert emoji flags or country identifiers to standard country codes for map display
-      const countryCode = getCountryCodeForMap(server.host.CountryCode)
+    // 只处理有 CountryCode 的服务器（非空字符串）
+    const rawCountryCode = server.host?.CountryCode?.trim()
+    
+    if (rawCountryCode) {
+      try {
+        // Convert emoji flags or country identifiers to standard country codes for map display
+        const countryCode = getCountryCodeForMap(rawCountryCode)
 
-      if (countryCode) {
-        if (!countryList.includes(countryCode)) {
-          countryList.push(countryCode)
+        if (countryCode) {
+          if (!countryList.includes(countryCode)) {
+            countryList.push(countryCode)
+          }
+          serverCounts[countryCode] = (serverCounts[countryCode] || 0) + 1
         }
-        serverCounts[countryCode] = (serverCounts[countryCode] || 0) + 1
+      } catch (error) {
+        // Silently handle invalid country codes
       }
     }
   }
@@ -43,6 +51,7 @@ export default function ServerGlobal() {
   const height = 500
 
   const geoJson = JSON.parse(geoJsonString)
+  
   const filteredFeatures = geoJson.features.filter(
     (feature: any) => feature.properties.iso_a3_eh !== "",
   )
