@@ -1,6 +1,6 @@
 "use client"
 
-import { Activity, Home, Languages, Moon, Sun, SunMoon } from "lucide-react"
+import { Activity, BarChart3, Home, Languages, Moon, Sun, SunMoon } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
@@ -67,6 +67,12 @@ export function DashCommand() {
       icon: <Activity />,
       label: t("NetworkCharts"),
       action: () => router.push("/network"),
+    },
+    {
+      keywords: ["quality", "analysis", "metrics", "performance"],
+      icon: <BarChart3 />,
+      label: t("QualityAnalysis"),
+      action: () => router.push("/quality"),
     },
     {
       keywords: ["light", "theme", "lightmode"],

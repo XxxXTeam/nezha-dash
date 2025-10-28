@@ -110,7 +110,7 @@
     "p_146-598_Findthecodeon": "コードのオープンソース",
     "a_303-585_GitHub": "GitHub",
     "section_607-869_2020": "© 2020〜",
-    "a_800-850_Hamster1963": "@Hamster1963"
+    "a_800-850_Hamster1963": "@CLFchen"
   },
   "Header": {
     "p_1079-1199_Simpleandbeautifuldashbo": "シンプルで美しいダッシュボード"
@@ -137,13 +137,20 @@
   "AggregatedNetworkCharts": {
     "loading": "読み込み中...",
     "no_online_servers": "オンラインサーバーがありません",
-    "server_selection": "サーバー選択",
-    "select_servers_to_display": "ネットワーク遅延グラフを表示するサーバーを選択してください",
-    "no_servers_selected": "サーバーが選択されていません。グラフを表示するには少なくとも1つのサーバーを選択してください。",
-    "multi_select_mode": "複数選択",
-    "single_select_mode": "単一選択",
-    "select_servers_multi": "比較する複数のサーバーを選択",
-    "select_server_single": "監視する1つのサーバーを選択"
+    "monitor_selection": "監視ポイント選択",
+    "monitor_selection_description": "特定のネットワーク監視ポイントを選択して、その監視ポイントからすべてのサーバーへの遅延グラフを表示します",
+    "all_monitors": "すべての監視ポイント",
+    "showing_monitor": "表示中の監視ポイント",
+    "grouping_options": "グループ化オプション",
+    "grouping_description": "タグまたは国別にサーバーをグループ化",
+    "no_grouping": "すべてのサーバー",
+    "group_by_tag": "タグ別",
+    "group_by_country": "国別",
+    "all_groups": "すべて",
+    "default_tag": "デフォルト",
+    "no_servers_to_display": "表示するサーバーがありません",
+    "no_data_for_monitor": "選択した監視ポイントのデータがありません",
+    "no_monitoring_data": "監視データがありません"
   },
   "DashCommand": {
     "TypeCommand": "コマンドを入力してください",
@@ -154,6 +161,57 @@
     "ToggleDarkMode": "ダークモードに切り替え",
     "ToggleSystemMode": "システムモードに切り替え",
     "Home": "ホーム",
-    "NetworkCharts": "ネットワークグラフ"
+    "NetworkCharts": "ネットワークグラフ",
+    "QualityAnalysis": "品質分析"
+  },
+  "QualityPage": {
+    "title": "サーバー品質分析",
+    "description": "異なるグループ間でサーバー品質メトリクスを分析・比較します"
+  },
+  "ServerQualityClient": {
+    "loading": "品質データを読み込み中...",
+    "error_loading_data": "品質データの読み込みに失敗しました",
+    "no_online_servers": "品質分析に使用できるオンラインサーバーがありません"
+  },
+  "MonitorSelector": {
+    "title": "監視ポイント選択",
+    "description": "特定のネットワーク監視ポイントを選択して、その監視ポイントからサーバー品質を分析します",
+    "all_monitors": "すべての監視ポイント",
+    "showing_results_for": "表示中の監視ポイント"
+  },
+  "GroupingSelector": {
+    "grouping_title": "グループ化オプション",
+    "grouping_description": "タグまたは国別にサーバーをグループ化して品質メトリクスを分析します",
+    "no_grouping": "すべてのサーバー",
+    "group_by_tag": "タグ別",
+    "group_by_country": "国別",
+    "select_group": "グループを選択",
+    "all_groups": "すべて",
+    "default_tag": "デフォルト"
+  },
+  "QualityMetrics": {
+    "total_servers": "サーバー総数",
+    "online_servers": "オンラインサーバー",
+    "online_rate": "オンライン率",
+    "avg_delay": "平均遅延",
+    "avg_packet_loss": "平均パケット損失"
+  },
+  "ServerQualityTable": {
+    "server_list": "サーバー品質リスト",
+    "server_name": "サーバー",
+    "tag": "タグ",
+    "location": "場所",
+    "quality": "品質",
+    "avg_delay": "平均遅延",
+    "packet_loss": "パケット損失",
+    "memory": "メモリ",
+    "uptime": "稼働時間",
+    "no_servers": "表示するサーバーがありません",
+    "no_data": "データなし",
+    "excellent": "優秀",
+    "good": "良好",
+    "fair": "普通",
+    "poor": "悪い",
+    "default_tag": "デフォルト"
   }
 }

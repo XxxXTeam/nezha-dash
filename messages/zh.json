@@ -111,7 +111,7 @@
     "p_146-598_Findthecodeon": "代码开源在",
     "a_303-585_GitHub": "GitHub",
     "section_607-869_2020": "© 2020-",
-    "a_800-850_Hamster1963": "@Hamster1963"
+    "a_800-850_Hamster1963": "@CLFchen"
   },
   "Header": {
     "p_1079-1199_Simpleandbeautifuldashbo": "简单美观的仪表板"
@@ -138,13 +138,20 @@
   "AggregatedNetworkCharts": {
     "loading": "加载中...",
     "no_online_servers": "没有在线服务器",
-    "server_selection": "服务器选择",
-    "select_servers_to_display": "选择要显示网络延迟图表的服务器",
-    "no_servers_selected": "未选择服务器。请至少选择一个服务器来显示图表。",
-    "multi_select_mode": "多选模式",
-    "single_select_mode": "单选模式",
-    "select_servers_multi": "选择多个服务器进行比较",
-    "select_server_single": "选择一个服务器进行监控"
+    "monitor_selection": "监控点选择",
+    "monitor_selection_description": "选择特定的网络监控点，查看该监控点对所有服务器的延迟图表",
+    "all_monitors": "全部监控点",
+    "showing_monitor": "当前显示监控点",
+    "grouping_options": "分组选项",
+    "grouping_description": "按标签或国家对服务器分组",
+    "no_grouping": "全部服务器",
+    "group_by_tag": "按标签",
+    "group_by_country": "按国家",
+    "all_groups": "全部",
+    "default_tag": "默认",
+    "no_servers_to_display": "没有服务器可显示",
+    "no_data_for_monitor": "所选监控点没有监控数据",
+    "no_monitoring_data": "没有监控数据"
   },
   "DashCommand": {
     "TypeCommand": "输入命令或搜索",
@@ -155,6 +162,57 @@
     "ToggleDarkMode": "切换暗色模式",
     "ToggleSystemMode": "切换系统模式",
     "Home": "首页",
-    "NetworkCharts": "网络图表"
+    "NetworkCharts": "网络图表",
+    "QualityAnalysis": "质量分析"
+  },
+  "QualityPage": {
+    "title": "服务器质量分析",
+    "description": "跨不同分组分析和比较服务器质量指标"
+  },
+  "ServerQualityClient": {
+    "loading": "加载质量数据中...",
+    "error_loading_data": "加载质量数据失败",
+    "no_online_servers": "没有可用于质量分析的在线服务器"
+  },
+  "MonitorSelector": {
+    "title": "监控点选择",
+    "description": "选择特定的网络监控点，从该监控点的角度分析服务器质量",
+    "all_monitors": "全部监控点",
+    "showing_results_for": "当前显示监控点"
+  },
+  "GroupingSelector": {
+    "grouping_title": "分组选项",
+    "grouping_description": "按标签或国家对服务器分组以分析质量指标",
+    "no_grouping": "全部服务器",
+    "group_by_tag": "按标签",
+    "group_by_country": "按国家",
+    "select_group": "选择分组",
+    "all_groups": "全部",
+    "default_tag": "默认"
+  },
+  "QualityMetrics": {
+    "total_servers": "服务器总数",
+    "online_servers": "在线服务器",
+    "online_rate": "在线率",
+    "avg_delay": "平均延迟",
+    "avg_packet_loss": "平均丢包"
+  },
+  "ServerQualityTable": {
+    "server_list": "服务器质量列表",
+    "server_name": "服务器",
+    "tag": "标签",
+    "location": "位置",
+    "quality": "质量",
+    "avg_delay": "平均延迟",
+    "packet_loss": "丢包率",
+    "memory": "内存",
+    "uptime": "运行时间",
+    "no_servers": "没有服务器可显示",
+    "no_data": "无数据",
+    "excellent": "优秀",
+    "good": "良好",
+    "fair": "一般",
+    "poor": "较差",
+    "default_tag": "默认"
   }
 }
