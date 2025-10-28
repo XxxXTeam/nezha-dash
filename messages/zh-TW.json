@@ -110,7 +110,7 @@
     "p_146-598_Findthecodeon": "程式碼開源",
     "a_303-585_GitHub": "GitHub",
     "section_607-869_2020": "© 2020-",
-    "a_800-850_Hamster1963": "@Hamster1963"
+    "a_800-850_Hamster1963": "@CLFchen"
   },
   "Header": {
     "p_1079-1199_Simpleandbeautifuldashbo": "簡單美觀的儀錶板"
@@ -135,15 +135,22 @@
     "description": "查看和比較不同伺服器的網絡延遲圖表"
   },
   "AggregatedNetworkCharts": {
-    "loading": "加載中...",
-    "no_online_servers": "沒有在線伺服器",
-    "server_selection": "伺服器選擇",
-    "select_servers_to_display": "選擇要顯示網絡延遲圖表的伺服器",
-    "no_servers_selected": "未選擇伺服器。請至少選擇一個伺服器來顯示圖表。",
-    "multi_select_mode": "多選模式",
-    "single_select_mode": "單選模式",
-    "select_servers_multi": "選擇多個伺服器進行比較",
-    "select_server_single": "選擇一個伺服器進行監控"
+    "loading": "載入中...",
+    "no_online_servers": "沒有線上伺服器",
+    "monitor_selection": "監控點選擇",
+    "monitor_selection_description": "選擇特定的網絡監控點，查看該監控點對所有伺服器的延遲圖表",
+    "all_monitors": "全部監控點",
+    "showing_monitor": "目前顯示監控點",
+    "grouping_options": "分組選項",
+    "grouping_description": "按標籤或國家對伺服器分組",
+    "no_grouping": "全部伺服器",
+    "group_by_tag": "按標籤",
+    "group_by_country": "按國家",
+    "all_groups": "全部",
+    "default_tag": "預設",
+    "no_servers_to_display": "沒有伺服器可顯示",
+    "no_data_for_monitor": "所選監控點沒有監控資料",
+    "no_monitoring_data": "沒有監控資料"
   },
   "DashCommand": {
     "TypeCommand": "輸入命令或搜尋",
@@ -154,6 +161,57 @@
     "ToggleDarkMode": "切換暗色模式",
     "ToggleSystemMode": "切換系統模式",
     "Home": "首頁",
-    "NetworkCharts": "網絡圖表"
+    "NetworkCharts": "網絡圖表",
+    "QualityAnalysis": "質量分析"
+  },
+  "QualityPage": {
+    "title": "伺服器質量分析",
+    "description": "跨不同分組分析和比較伺服器質量指標"
+  },
+  "ServerQualityClient": {
+    "loading": "載入質量資料中...",
+    "error_loading_data": "載入質量資料失敗",
+    "no_online_servers": "沒有可用於質量分析的線上伺服器"
+  },
+  "MonitorSelector": {
+    "title": "監控點選擇",
+    "description": "選擇特定的網絡監控點，從該監控點的角度分析伺服器質量",
+    "all_monitors": "全部監控點",
+    "showing_results_for": "目前顯示監控點"
+  },
+  "GroupingSelector": {
+    "grouping_title": "分組選項",
+    "grouping_description": "按標籤或國家對伺服器分組以分析質量指標",
+    "no_grouping": "全部伺服器",
+    "group_by_tag": "按標籤",
+    "group_by_country": "按國家",
+    "select_group": "選擇分組",
+    "all_groups": "全部",
+    "default_tag": "預設"
+  },
+  "QualityMetrics": {
+    "total_servers": "伺服器總數",
+    "online_servers": "線上伺服器",
+    "online_rate": "線上率",
+    "avg_delay": "平均延遲",
+    "avg_packet_loss": "平均封包遺失"
+  },
+  "ServerQualityTable": {
+    "server_list": "伺服器質量列表",
+    "server_name": "伺服器",
+    "tag": "標籤",
+    "location": "位置",
+    "quality": "質量",
+    "avg_delay": "平均延遲",
+    "packet_loss": "封包遺失率",
+    "memory": "記憶體",
+    "uptime": "運行時間",
+    "no_servers": "沒有伺服器可顯示",
+    "no_data": "無資料",
+    "excellent": "優秀",
+    "good": "良好",
+    "fair": "一般",
+    "poor": "較差",
+    "default_tag": "預設"
   }
 }

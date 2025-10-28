@@ -111,7 +111,7 @@
     "p_146-598_Findthecodeon": "Find the code on",
     "a_303-585_GitHub": "GitHub",
     "section_607-869_2020": "© 2020-",
-    "a_800-850_Hamster1963": "@Hamster1963"
+    "a_800-850_Hamster1963": "@CLFchen"
   },
   "Header": {
     "p_1079-1199_Simpleandbeautifuldashbo": "Simple and beautiful dashboard"
@@ -138,13 +138,20 @@
   "AggregatedNetworkCharts": {
     "loading": "Loading...",
     "no_online_servers": "No online servers available",
-    "server_selection": "Server Selection",
-    "select_servers_to_display": "Select which servers to display network latency charts for",
-    "no_servers_selected": "No servers selected. Please select at least one server to display charts.",
-    "multi_select_mode": "Multi-select",
-    "single_select_mode": "Single-select",
-    "select_servers_multi": "Select multiple servers to compare",
-    "select_server_single": "Select one server to monitor"
+    "monitor_selection": "Monitor Selection",
+    "monitor_selection_description": "Select a specific network monitor to view latency charts for all servers from that monitoring point",
+    "all_monitors": "All Monitors",
+    "showing_monitor": "Showing monitor",
+    "grouping_options": "Grouping Options",
+    "grouping_description": "Group servers by tag or country",
+    "no_grouping": "All Servers",
+    "group_by_tag": "By Tag",
+    "group_by_country": "By Country",
+    "all_groups": "All",
+    "default_tag": "Default",
+    "no_servers_to_display": "No servers to display",
+    "no_data_for_monitor": "No monitoring data available for selected monitor",
+    "no_monitoring_data": "No monitoring data available"
   },
   "DashCommand": {
     "TypeCommand": "Type a command or search...",
@@ -155,6 +162,57 @@
     "ToggleDarkMode": "Toggle Dark Mode",
     "ToggleSystemMode": "Toggle System Mode",
     "Home": "Home",
-    "NetworkCharts": "Network Charts"
+    "NetworkCharts": "Network Charts",
+    "QualityAnalysis": "Quality Analysis"
+  },
+  "QualityPage": {
+    "title": "Server Quality Analysis",
+    "description": "Analyze and compare server quality metrics across different groups"
+  },
+  "ServerQualityClient": {
+    "loading": "Loading quality data...",
+    "error_loading_data": "Failed to load quality data",
+    "no_online_servers": "No online servers available for quality analysis"
+  },
+  "MonitorSelector": {
+    "title": "Monitor Selection",
+    "description": "Select a specific network monitor to analyze server quality from that monitoring point",
+    "all_monitors": "All Monitors",
+    "showing_results_for": "Showing results for"
+  },
+  "GroupingSelector": {
+    "grouping_title": "Grouping Options",
+    "grouping_description": "Group servers by tag or country to analyze quality metrics",
+    "no_grouping": "All Servers",
+    "group_by_tag": "By Tag",
+    "group_by_country": "By Country",
+    "select_group": "Select Group",
+    "all_groups": "All",
+    "default_tag": "Default"
+  },
+  "QualityMetrics": {
+    "total_servers": "Total Servers",
+    "online_servers": "Online Servers",
+    "online_rate": "Online Rate",
+    "avg_delay": "Avg Latency",
+    "avg_packet_loss": "Avg Loss"
+  },
+  "ServerQualityTable": {
+    "server_list": "Server Quality List",
+    "server_name": "Server",
+    "tag": "Tag",
+    "location": "Location",
+    "quality": "Quality",
+    "avg_delay": "Avg Latency",
+    "packet_loss": "Loss",
+    "memory": "Memory",
+    "uptime": "Uptime",
+    "no_servers": "No servers to display",
+    "no_data": "No Data",
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "poor": "Poor",
+    "default_tag": "Default"
   }
 }
